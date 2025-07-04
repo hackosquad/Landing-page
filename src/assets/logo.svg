@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bold;
+      font-size: 48px;
+      fill: red;
+    }
+  </style>
+  <text x="50" y="100" class="text">HACKOSQUAD</text>
+</svg>
+<!-- This is a simple SVG logo with the text "HACKOSQUAD" -->
+<!-- The text is styled with a bold font, size 48px, and red color -->
