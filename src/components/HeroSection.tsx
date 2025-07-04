@@ -1,8 +1,33 @@
-import React from 'react';
+import { useRef, useEffect } from 'react';
+import { gsap } from "gsap";
+import heroImg from '../assets/HackosquadAdmin.png';
 
 const HeroSection = () => {
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (imgRef.current) {
+      gsap.fromTo(
+        imgRef.current,
+        { scale: 0.92, opacity: 0, y: 40 },
+        { scale: 1, opacity: 1, y: 0, duration: 1.4, ease: "power2.out",
+          onComplete: () => {
+            gsap.to(imgRef.current, {
+              y: '+=24',
+              repeat: -1,
+              yoyo: true,
+              duration: 2.2,
+              ease: "power1.inOut"
+            });
+          }
+        }
+      );
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
+    
+    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center pt-40">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent"></div>
@@ -13,7 +38,7 @@ const HeroSection = () => {
 
       
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-8 max-w-6xl">
+      <div className="relative z-10 text-center px-11 max-w-6xl">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
           The ultimate platform to{' '}
           <span className="text-red-600 relative">
@@ -31,8 +56,32 @@ const HeroSection = () => {
           A personalized cybersecurity learning platform for all skill levels — from beginners to experts — packed with curated content to help you grow.
         </p>
       </div>
+
+      {/* gsap image floating animation only */}
+      <div className="relative flex w-full items-center justify-center z-10 mt-8">
+        <div className="w-full max-w-3xl flex items-center justify-center">
+          <img
+            src={heroImg}
+            alt="Hero"
+            className="w-full h-[60vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto"
+            ref={imgRef}
+            style={{ borderRadius: '24px' }}
+          />
+        </div>
+      </div>
+
+      {/* separation line */}
+      <div className="w-full flex justify-center mt-8">
+        <hr className="w-full max-w-8xl border-t-2 border-red-600 opacity-60" />
+      </div>
+
+      <div>
+      
+        gdgfgd
+      </div>
+
     </div>
   );
-};
+}
 
 export default HeroSection;
