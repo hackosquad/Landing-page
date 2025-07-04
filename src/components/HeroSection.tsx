@@ -1,16 +1,28 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroImg from '../assets/HackosquadAdmin.png';
 
 const HeroSection = () => {
   const imgRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     if (imgRef.current) {
       gsap.fromTo(
         imgRef.current,
         { scale: 0.92, opacity: 0, y: 40 },
-        { scale: 1, opacity: 1, y: 0, duration: 1.4, ease: "power2.out",
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 1.4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: imgRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
           onComplete: () => {
             gsap.to(imgRef.current, {
               y: '+=24',
@@ -26,7 +38,6 @@ const HeroSection = () => {
   }, []);
 
   return (
-    
     <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center pt-40">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -34,9 +45,7 @@ const HeroSection = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
       </div>
-      
 
-      
       {/* Hero Content */}
       <div className="relative z-10 text-center px-11 max-w-6xl">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
@@ -51,7 +60,6 @@ const HeroSection = () => {
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-red-800 rounded"></div>
           </span>{' '} skills
         </h1>
-        
         <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
           A personalized cybersecurity learning platform for all skill levels — from beginners to experts — packed with curated content to help you grow.
         </p>
@@ -74,12 +82,9 @@ const HeroSection = () => {
       <div className="w-full flex justify-center mt-8">
         <hr className="w-full max-w-8xl border-t-2 border-red-600 opacity-60" />
       </div>
-
       <div>
-      
         gdgfgd
       </div>
-
     </div>
   );
 }
