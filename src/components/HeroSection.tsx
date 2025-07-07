@@ -64,6 +64,11 @@ const HeroSection = () => {
           A personalized cybersecurity learning platform for all skill levels — from beginners to experts — packed with curated content to help you grow.
         </p>
       </div>
+      <div className='justify-center flex py-8'>
+       <button className="bg-red-600 text-white py-3 px-6 rounded-lg font-bold transition duration-300 transform hover:scale-110 hover:bg-red-700 focus:outline-none">
+        Get Started Now
+        </button>
+      </div>
 
       {/* gsap image floating animation only */}
       <div className="relative flex w-full items-center justify-center z-10 mt-8">
