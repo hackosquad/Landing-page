@@ -1,41 +1,29 @@
-import { useRef, useEffect } from 'react';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useState } from 'react';
 import heroImg from '../assets/HackosquadAdmin.png';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
-  const imgRef = useRef<HTMLImageElement | null>(null);
+  const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    if (imgRef.current) {
-      gsap.fromTo(
-        imgRef.current,
-        { scale: 0.92, opacity: 0, y: 40 },
-        {
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          duration: 1.4,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: imgRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none"
-          },
-          onComplete: () => {
-            gsap.to(imgRef.current, {
-              y: '+=24',
-              repeat: -1,
-              yoyo: true,
-              duration: 2.2,
-              ease: "power1.inOut"
-            });
-          }
-        }
-      );
-    }
-  }, []);
+  // 3D tilt effect on mouse move
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    // Max tilt in degrees
+    const maxTilt = 18;
+    const rotateY = ((x - centerX) / centerX) * maxTilt;
+    const rotateX = -((y - centerY) / centerY) * maxTilt;
+    setRotate({ x: rotateX, y: rotateY });
+  };
+
+  const handleMouseLeave = () => {
+    setRotate({ x: 0, y: 0 });
+  };
 
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center pt-40">
@@ -70,26 +58,30 @@ const HeroSection = () => {
         </button>
       </div>
 
-      {/* gsap image floating animation only */}
-      <div className="relative flex w-full items-center justify-center z-10 mt-8">
-        <div className="w-full max-w-3xl flex items-center justify-center">
-          <img
-            src={heroImg}
-            alt="Hero"
-            className="w-full h-[60vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto"
-            ref={imgRef}
-            style={{ borderRadius: '24px' }}
-          />
-        </div>
+      {/* Framer Motion 3D interactive image */}
+      <div
+        className="relative flex w-full items-center justify-center z-10 mt-8"
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ perspective: 1200 }}
+      >
+        <motion.img
+          src={heroImg}
+          alt="Hero"
+          className="w-full h-[60vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none"
+          style={{ borderRadius: '24px', boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
+          animate={{ rotateX: rotate.x, rotateY: rotate.y, scale: 1 }}
+          transition={{ type: 'spring', stiffness: 180, damping: 18, mass: 0.7 }}
+          draggable={false}
+        />
       </div>
 
       {/* separation line */}
       <div className="w-full flex justify-center mt-8">
         <hr className="w-full max-w-8xl border-t-2 border-red-600 opacity-60" />
       </div>
-      <div>
-        gdgfgd
-      </div>
+      {/* Remove stray debug text */}
     </div>
   );
 }
