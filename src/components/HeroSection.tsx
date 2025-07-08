@@ -69,7 +69,7 @@ const HeroSection = () => {
         <motion.img
           src={heroImg}
           alt="Hero"
-          className="w-full h-[60vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none"
+          className="w-[75vw] h-[70vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none"
           style={{ borderRadius: '24px', boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
           animate={{ rotateX: rotate.x, rotateY: rotate.y, scale: 1 }}
           transition={{ type: 'spring', stiffness: 180, damping: 18, mass: 0.7 }}
@@ -77,11 +77,7 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* separation line */}
-      <div className="w-full flex justify-center mt-8">
-        <hr className="w-full max-w-8xl border-t-2 border-red-600 opacity-60" />
-      </div>
-      {/* Remove stray debug text */}
+      
     </div>
   );
 }
