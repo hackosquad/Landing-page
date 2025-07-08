@@ -1,5 +1,10 @@
 import Navbar from "./components/Navbar"
 import HeroSection from "./components/HeroSection"
+import Features from "./components/Features"
+import ConclusionAlt from "./components/ConclusionAlt.tsx"
+import Footer from "./components/FooterAlt.tsx"
+import FAQs from "./components/FAQs"
+
 
 
 const App = () => {
@@ -7,6 +12,10 @@ const App = () => {
     <div>
       <Navbar />
       <HeroSection />
+      <Features />
+      <ConclusionAlt/>
+      <FAQs/>    
+      <Footer/>
     </div>
   )
 }

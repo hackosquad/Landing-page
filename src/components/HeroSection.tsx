@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import heroImg from '../assets/HackosquadAdmin.png'
-import labs from '../assets/labs.png';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -53,6 +52,11 @@ const HeroSection = () => {
           A personalized cybersecurity learning platform for all skill levels — from beginners to experts — packed with curated content to help you grow.
         </p>
       </div>
+      <div className='justify-center flex py-8'>
+       <button className="bg-red-600 text-white py-3 px-6 rounded-lg font-bold transition duration-300 transform hover:scale-110 hover:bg-red-700 focus:outline-none">
+        Get Started Now
+        </button>
+      </div>
 
       {/* Framer Motion 3D interactive image */}
       <div
@@ -65,7 +69,7 @@ const HeroSection = () => {
         <motion.img
           src={heroImg}
           alt="Hero"
-          className="max-w-5xl h-[60vh] rounded-3xl border-4 border-gray-900 bg-black mx-auto select-none"
+          className="w-[75vw] h-[70vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none"
           style={{ borderRadius: '24px', boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
           initial={{ opacity: 0, scale: 0.95, boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
           animate={{
@@ -97,61 +101,7 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* separation line */}
-      <div className="w-full flex justify-center mt-8">
-        <hr
-          className="w-full max-w-8xl border-t-2 opacity-80"
-          style={{
-            borderImage: 'linear-gradient(90deg, #111 0%, #222 10%, #ff003c 50%, #222 90%, #111 100%) 1',
-            borderTop: '2px solid',
-            borderLeft: 0,
-            borderRight: 0,
-            borderBottom: 0,
-          }}
-        />
-      </div>
-
-
-      {/* contents */}
-
-      {/* Hackosquad branding */}
-      <div className="w-full flex flex-col items-center mt-12">
-        <span
-          className="font-extrabold text-5xl md:text-6xl tracking-widest bg-gradient-to-r from-red-500 via-white to-red-500 bg-clip-text text-transparent drop-shadow-lg select-none"
-          style={{ letterSpacing: '0.25em', fontFamily: 'Montserrat, sans-serif' }}
-        >
-          HACKOSQUAD
-        </span>
-        {/* Additional contents below branding */}
-        <div className="mt-6 max-w-3xl text-center">
-          <p className="text-lg md:text-xl text-gray-300 mb-4">
-            Welcome to Hackosquad — your gateway to mastering cybersecurity skills, challenges, and real-world scenarios.
-          </p>
-        </div>
-      </div>
-
-      {/* listing of features in the divisions */}
-       <div className="features pt-20   ">
-
-        <div className="interactive w-full pt-3 px-11 flex items-center ">
-          <div className="text  ">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Pracitce Labs
-          </h2>
-          <p className="text-lg w-3/4  md:text-xl text-gray-300 mb-8">
-           Practice Labs are interactive, hands-on environments where you can apply your cybersecurity skills in real-world scenarios. These labs cover a wide range of topics, from basic security concepts to advanced penetration testing techniques.
-          </p>
-          </div>
-          <div className="image">
-
-            <img className="border rounded-xl border-red-500" src={labs} alt="" />
-
-          </div>
-          {/* Add more feature details here */}
-
-          
-        </div>
-       </div>
+      
     </div>
   );
 }
