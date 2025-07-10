@@ -26,17 +26,17 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center pt-40">
+    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center pt-32 sm:pt-40 px-2 sm:px-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-red-600/10 rounded-full blur-3xl"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-11 max-w-6xl">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+      <div className="relative z-10 text-center px-3 sm:px-11 max-w-2xl sm:max-w-6xl">
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">
           The ultimate platform to{' '}
           <span className="text-red-600 relative">
             enhance
@@ -48,19 +48,19 @@ const HeroSection = () => {
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-red-800 rounded"></div>
           </span>{' '} skills
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+        <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-xs sm:max-w-4xl mx-auto">
           A personalized cybersecurity learning platform for all skill levels — from beginners to experts — packed with curated content to help you grow.
         </p>
       </div>
-      <div className='justify-center flex py-8'>
-       <button className="bg-red-600 text-white py-3 px-6 rounded-lg font-bold transition duration-300 transform hover:scale-110 hover:bg-red-700 focus:outline-none">
+      <div className='justify-center flex py-6 sm:py-8'>
+       <button className="bg-red-600 text-white py-2 px-5 sm:py-3 sm:px-6 rounded-lg font-bold transition duration-300 transform hover:scale-110 hover:bg-red-700 focus:outline-none text-base sm:text-lg">
         Get Started Now
         </button>
       </div>
 
       {/* Framer Motion 3D interactive image */}
       <div
-        className="relative flex w-full items-center justify-center z-10 mt-8"
+        className="relative flex w-full items-center justify-center z-10 mt-6 sm:mt-8"
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -69,7 +69,7 @@ const HeroSection = () => {
         <motion.img
           src={heroImg}
           alt="Hero"
-          className="w-[75vw] h-[70vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none"
+          className="w-full max-w-[90vw] sm:max-w-[75vw] h-auto max-h-[60vh] sm:max-h-[70vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none object-contain"
           style={{ borderRadius: '24px', boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
           initial={{ opacity: 0, scale: 0.95, boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
           animate={{

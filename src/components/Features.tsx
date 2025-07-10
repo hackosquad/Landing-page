@@ -35,50 +35,55 @@ const Features = () => {
   return (
     <div>
      {/* Decorative separation line at the top */}
-     <section className="min-h-screen text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20">
-      
+     <section className="min-h-0 md:min-h-screen text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-20 pt-0 pb-10 md:py-10">
       {/* Left Side */}
       <div className="max-w-xl space-y-6">
         <div className="inline-block px-4 py-1 text-sm font-medium bg-red-900 text-white rounded-full shadow-md">
           Level Up Your Cyber Skills
         </div>
-        
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           <span className="block">Practical</span>
           <span className="block text-red-600">cyber defense</span>
           <span className="block">training</span>
         </h1>
-
         <p className="text-gray-300 text-lg">
           We deliver an interactive platform where concepts come to life through real-world scenarios.
           Gain critical hands-on exposure to strengthen your cybersecurity instincts.
         </p>
-
         <p className="text-red-600 font-medium">
           Our belief: <span className="text-white italic">practice fuels mastery.</span>
         </p>
-
         <motion.button
           whileHover={{ scale: 1.05 }}
           className="mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 transition text-white font-semibold rounded-md shadow-lg"
         >
           Begin Your Journey
         </motion.button>
+        {/* Mobile image shown after content */}
+        <div className="w-full flex justify-center md:hidden mt-10 ">
+          <motion.img
+            src={img1}
+            alt="Cyber Training Illustration"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-2xl h-auto rounded-lg shadow-xl object-contain"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          />
+        </div>
       </div>
-
-      {/* Right Side (optional image/animation can be placed here) */}
+      {/* Right Side (image) - show on right for md+ */}
       <div className="hidden md:block mt-10 md:mt-0">
         <motion.img
           src={img1}
           alt="Cyber Training Illustration"
-          className="max-w-2xl rounded-lg shadow-xl"
+          className="max-w-2xl h-auto rounded-lg shadow-xl object-contain"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         />
       </div>
-      
     </section>
     <section className="py-20 px-6 md:px-24 text-white">
       <div className="max-w-6xl mx-auto text-center mb-16">
@@ -89,7 +94,6 @@ const Features = () => {
           Unique features crafted to push your cybersecurity skills beyond limits.
         </p>
       </div>
-
       <div className="grid md:grid-cols-3 gap-10">
         {features.map((feature, index) => (
           <motion.div
@@ -100,13 +104,12 @@ const Features = () => {
             <motion.img
               src={feature.image}
               alt={feature.title}
-              className="w-full h-48 object-cover"
+              className="w-full h-40 sm:h-48 md:h-56 object-contain bg-black"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.7, ease: 'easeOut' }}
             />
-
             <div className="p-6 space-y-4">
               <div className="text-3xl">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white">{feature.title}</h3>
