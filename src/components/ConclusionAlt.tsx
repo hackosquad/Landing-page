@@ -52,7 +52,11 @@ const ConclusionAlt = () => {
           </a>
           <a
             href="#contact"
-            className="inline-block border border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-200 text-base sm:text-lg font-poppins"
+            className="inline-block border border-red-600 text-red-600 
+              hover:border-red-500 hover:text-red-500 
+              hover:shadow-[0_0_10px_3px_rgba(239,68,68,0.7)] 
+              font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full 
+              transition-all duration-200 text-lg sm:text-xl font-poppins"
           >
             Contact Us
           </a>
