@@ -51,10 +51,14 @@ const ConclusionAlt = () => {
             Get Started
           </a>
           <a
-            href="#contact"
-            className="inline-block border border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-4 px-8 rounded-full transition-all duration-200 text-lg font-poppins"
-          >
-            Contact Us
+           href="#contact"
+            className="inline-block border border-red-600 text-red-600 
+             hover:border-red-500 hover:text-red-500 
+             hover:shadow-[0_0_10px_3px_rgba(239,68,68,0.7)] 
+             font-bold py-4 px-8 rounded-full 
+             transition-all duration-200 text-lg font-poppins"
+           >
+           Contact Us
           </a>
         </div>
         {/* Discord CTA */}
