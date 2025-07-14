@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const platformLinks = [
