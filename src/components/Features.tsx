@@ -4,7 +4,7 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import img4 from "../assets/img4.png";
-
+import { useState } from 'react';
 
 
 const features = [
@@ -85,40 +85,7 @@ const Features = () => {
         />
       </div>
     </section>
-    <section className="py-20 px-6 md:px-24 text-white">
-      <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-          What Makes <span className="text-red-600">HackoSquad</span> Stand Out?
-        </h2>
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-          Unique features crafted to push your cybersecurity skills beyond limits.
-        </p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-10">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.03 }}
-            className="bg-red-900/10 border border-red-700 rounded-xl overflow-hidden shadow-lg hover:shadow-red-600/40 transition-all"
-          >
-            <motion.img
-              src={feature.image}
-              alt={feature.title}
-              className="w-full h-40 sm:h-48 md:h-56 object-contain bg-black"
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.7, ease: 'easeOut' }}
-            />
-            <div className="p-6 space-y-4">
-              <div className="text-3xl">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-              <p className="text-gray-300 text-md">{feature.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Features from "./components/Features"
 import ConclusionAlt from "./components/ConclusionAlt.tsx"
 import Footer from "./components/FooterAlt.tsx"
 import FAQs from "./components/FAQs"
+import Operations from "./components/Operations"
 
 
 
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <Features />
+      <Operations/>
       <ConclusionAlt/>
       <FAQs/>    
       <Footer/>
