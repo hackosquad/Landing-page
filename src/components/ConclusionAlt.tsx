@@ -1,5 +1,4 @@
-import React from "react";
-import { FaTwitter, FaLinkedin, FaGithub, FaCheckCircle, FaDiscord } from "react-icons/fa";
+
 
 const benefits = [
   {

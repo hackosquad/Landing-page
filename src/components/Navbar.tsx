@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // State to manage mobile menu visibility
@@ -15,12 +15,12 @@ const Navbar = () => {
               </span>
             </div>
 
-            <div className="hidden md:flex space-x-10 text-lg font-sans">
+            {/* <div className="hidden md:flex space-x-10 text-lg font-sans">
               <a href="#features" className="text-gray-200 hover:text-red-500 font-medium">Features</a>
               <a href="#pricing" className="text-gray-200 hover:text-red-500 font-medium">Pricing</a>
               <a href="#tactics" className="text-gray-200 hover:text-red-500 font-medium">Tactics</a>
               <a href="#blog" className="text-gray-200 hover:text-red-500 font-medium">Blog</a>
-            </div>
+            </div> */}
 
             <div className="hidden md:flex items-center space-x-4">
               <a href="#login" className="px-1 py-2 text-white font-semibold rounded hover:text-red-600 transition">Login</a>
