@@ -56,11 +56,11 @@ const Navbar = () => {
           style={{ willChange: 'transform' }}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col">
-            <a href="#features" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Features</a>
+            {/* <a href="#features" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Features</a>
             <a href="#pricing" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Pricing</a>
             <a href="#tactics" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Tactics</a>
-            <a href="#blog" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Blog</a>
-            <a href="#login" className="block px-3 py-2 rounded text-red-600 font-semibold hover:bg-red-50 hover:text-black text-base">Login</a>
+            <a href="#blog" className="block px-3 py-2 rounded text-white hover:bg-red-600 text-base">Blog</a> */}
+            <a href="#login" className="block px-3 py-2 rounded text-white font-semibold ">Login</a>
             <a href="#signup" className="block px-3 py-2 rounded bg-red-600 text-white font-semibold hover:bg-red-700 text-base">Get Started</a>
           </div>
         </div>

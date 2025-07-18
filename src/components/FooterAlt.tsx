@@ -1,5 +1,5 @@
 
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaDiscord, FaLinkedin } from "react-icons/fa";
 
 const platformLinks = [
   { href: "#about", label: "About" },
@@ -10,13 +10,10 @@ const platformLinks = [
 
 const resourceLinks = [
   { href: "#account", label: "Account" },
-  { href: "#tools", label: "Tools" },
-  { href: "#newsletter", label: "Newsletter" },
   { href: "#faq", label: "FAQ" },
 ];
 
 const legalLinks = [
-  { href: "#guides", label: "Guides" },
   { href: "#terms", label: "Terms & Conditions" },
   { href: "#privacy", label: "Privacy Policy" },
   { href: "#licensing", label: "Licensing" },
@@ -60,11 +57,11 @@ const FooterAlt = () => (
       </div>
       <div className="border-t border-red-900/40 mb-0"></div>
       <div className="flex flex-col md:flex-row justify-between items-center py-4 sm:py-6 gap-2 sm:gap-4">
-        <span className="text-white text-xs sm:text-sm">Follow us on:</span>
+        <span className="text-white text-xs sm:text-sm">Follow and join us on:</span>
         <div className="flex gap-4 sm:gap-6">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-500 text-lg sm:text-xl" aria-label="Twitter"><FaTwitter /></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-500 text-lg sm:text-xl" aria-label="Facebook"><FaFacebook /></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-500 text-lg sm:text-xl" aria-label="Instagram"><FaInstagram /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-500 text-lg sm:text-xl" aria-label="Twitter"><FaLinkedin /></a>
+          <a href="https://discore.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-500 text-lg sm:text-xl" aria-label="Facebook"><FaDiscord /></a>
+          
         </div>
       </div>
     </div>
