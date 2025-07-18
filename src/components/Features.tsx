@@ -1,35 +1,35 @@
 
 import { motion } from 'framer-motion';
 import img1 from "../assets/img1.png";
-import img2 from "../assets/img2.png";
-import img3 from "../assets/img3.png";
-import img4 from "../assets/img4.png";
-import { useState } from 'react';
+// import img2 from "../assets/img2.png";
+// import img3 from "../assets/img3.png";
+// import img4 from "../assets/img4.png";
 
 
-const features = [
-  {
-    icon: "🔥",
-    title: "Live Cyber Ranges",
-    image: img2 , // replace with your local asset
-    description:
-      "Dive into simulated breach environments built to mirror real-world attacks. Analyze logs, exploit systems, and test your skills in dynamic red vs blue team scenarios with real-time feedback.",
-  },
-  {
-    icon: "🧪",
-    title: "Guided Lab Missions",
-    image: img3, // replace with your local asset
-    description:
-      "Progress through hands-on labs designed for beginner to advanced learners. Learn exploitation, enumeration, and privilege escalation with built-in hints and live targets.",
-  },
-  {
-    icon: "🎯",
-    title: "Skill Path Progression",
-    image: img4, // replace with your local asset
-    description:
-      "Level up your hacker profile by completing challenges, earning badges, and climbing the ranks. Skill-based unlocking ensures you're always challenged — and always growing.",
-  },
-];
+
+// const features = [
+//   {
+//     icon: "🔥",
+//     title: "Live Cyber Ranges",
+//     image: img2 , // replace with your local asset
+//     description:
+//       "Dive into simulated breach environments built to mirror real-world attacks. Analyze logs, exploit systems, and test your skills in dynamic red vs blue team scenarios with real-time feedback.",
+//   },
+//   {
+//     icon: "🧪",
+//     title: "Guided Lab Missions",
+//     image: img3, // replace with your local asset
+//     description:
+//       "Progress through hands-on labs designed for beginner to advanced learners. Learn exploitation, enumeration, and privilege escalation with built-in hints and live targets.",
+//   },
+//   {
+//     icon: "🎯",
+//     title: "Skill Path Progression",
+//     image: img4, // replace with your local asset
+//     description:
+//       "Level up your hacker profile by completing challenges, earning badges, and climbing the ranks. Skill-based unlocking ensures you're always challenged — and always growing.",
+//   },
+// ];
 
 const Features = () => {
   return (

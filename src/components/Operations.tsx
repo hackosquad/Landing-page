@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Monitor, Shield } from 'lucide-react';
 
 export default function Operations() {
