@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import heroImg from '../assets/HackosquadAdmin.png';
+import heroImg from '../assets/hsqd.netlify.app_dashboardResolution.png';
 import { AnimatePresence, motion } from "framer-motion";
 
 
@@ -89,46 +89,57 @@ const HeroSection = () => {
 
       {/* Hero Image with 3D tilt */}
       <div
-        className="relative flex w-full items-center justify-center z-10 mt-6 sm:mt-8"
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{ perspective: 1200 }}
-      >
-        <motion.img
-          src={heroImg}
-          alt="Hero"
-          className="w-full max-w-[90vw] sm:max-w-[75vw] h-auto max-h-[60vh] sm:max-h-[70vh] rounded-3xl border-4 border-gray-700 bg-black mx-auto select-none object-contain"
-          style={{ borderRadius: '24px', boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)' }}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{
-            rotateX: rotate.x,
-            rotateY: rotate.y,
-            scale: 1,
-            opacity: 1,
-            boxShadow: [
-              '0 8px 32px 0 rgba(0,0,0,0.45)',
-              '0 16px 48px 0 rgba(255,0,60,0.25)',
-              '0 8px 32px 0 rgba(0,0,0,0.45)'
-            ]
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 120,
-            damping: 18,
-            mass: 0.7,
-            opacity: { duration: 0.7 },
-            scale: { duration: 1.1 },
-            boxShadow: {
-              duration: 2.2,
-              repeat: Infinity,
-              repeatType: 'loop',
-              ease: 'easeInOut',
-            }
-          }}
-          draggable={false}
-        />
-      </div>
+  className="relative z-10 flex items-center justify-center mt-4"
+  ref={containerRef}
+  onMouseMove={handleMouseMove}
+  onMouseLeave={handleMouseLeave}
+  style={{
+    perspective: 1200,
+    overflow: 'visible',
+  }}
+>
+  <motion.img
+    src={heroImg}
+    alt="Hero"
+    className="w-[90vw] md:w-[85vw] h-auto border-4 border-gray-700 bg-black select-none object-contain rounded-3xl my-6 sm:my-10"
+    style={{
+      borderRadius: '24px',
+      boxShadow: '0 8px 32px 0 rgba(0,0,0,0.45)',
+    }}
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{
+      rotateX: rotate.x,
+      rotateY: rotate.y,
+      scale: 1,
+      opacity: 1,
+      boxShadow: [
+        '0 8px 32px 0 rgba(0,0,0,0.45)',
+        '0 16px 48px 0 rgba(255,0,60,0.25)',
+        '0 8px 32px 0 rgba(0,0,0,0.45)'
+      ]
+    }}
+    transition={{
+      type: 'spring',
+      stiffness: 120,
+      damping: 18,
+      mass: 0.7,
+      opacity: { duration: 0.7 },
+      scale: { duration: 1.1 },
+      boxShadow: {
+        duration: 2.2,
+        repeat: Infinity,
+        repeatType: 'loop',
+        ease: 'easeInOut'
+      }
+    }}
+    draggable={false}
+  />
+</div>
+
+
+
+
+
 
     </div>
   );

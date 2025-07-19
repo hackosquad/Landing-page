@@ -60,7 +60,7 @@ const Features = () => {
           Begin Your Journey
         </motion.button>
         {/* Mobile image shown after content */}
-        <div className="w-full flex justify-center md:hidden mt-10 ">
+        <div className="w-full flex justify-center md:hidden py-10 ">
           <motion.img
             src={img1}
             alt="Cyber Training Illustration"
