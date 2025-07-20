@@ -5,7 +5,7 @@ import ConclusionAlt from "./components/ConclusionAlt.tsx"
 import Footer from "./components/FooterAlt.tsx"
 import FAQs from "./components/FAQs"
 import Operations from "./components/Operations"
-
+import Labs from "./components/Labs"
 
 
 const App = () => {
@@ -15,6 +15,7 @@ const App = () => {
       <HeroSection />
       <Features />
       <Operations/>
+      <Labs/>
       <ConclusionAlt/>
       <FAQs/>    
       <Footer/>
