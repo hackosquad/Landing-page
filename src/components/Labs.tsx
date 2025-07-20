@@ -92,7 +92,7 @@ export default function Labs() {
        Explore Labs
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl px-4">
-        {labs.map((lab, idx) => (
+        {labs.map((lab) => (
           <div
             key={lab.title}
             className={`rounded-3xl border-2 p-6 flex flex-col justify-between shadow-xl bg-gradient-to-br ${colorMap[lab.color]} relative`}
