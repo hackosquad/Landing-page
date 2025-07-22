@@ -8,6 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  cursor: url('./assets/ladybug_9216475.png') 12 12, auto;
 }
 
 * {
@@ -15,6 +16,40 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  cursor: url('./assets/ladybug_9216475.png') 12 12, auto;
+}
+
+/* Custom cursor styles */
+.cursor-pointer {
+  cursor: url('./assets/ladybug_9216475.png') 12 12, pointer !important;
+}
+
+.cursor-text {
+  cursor: url('./assets/ladybug_9216475.png') 12 12, text !important;
+}
+
+/* Smooth cursor transitions */
+* {
+  transition: all 0.1s ease-out;
+}
+
+/* Interactive elements get enhanced cursor */
+button, a, [role="button"], input, textarea, select {
+  cursor: url('./assets/ladybug_9216475.png') 12 12, pointer !important;
+  transition: transform 0.1s ease-out;
+}
+
+button:hover, a:hover, [role="button"]:hover {
+  transform: scale(1.02);
+}
+
+/* Custom cursor for different states */
+.cursor-grab {
+  cursor: url('./assets/ladybug_9216475.png') 12 12, grab !important;
+}
+
+.cursor-grabbing {
+  cursor: url('./assets/ladybug_9216475.png') 12 12, grabbing !important;
 }
 
 .logo {

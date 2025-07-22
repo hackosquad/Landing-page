@@ -1,4 +1,3 @@
-
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 
 const platformLinks = [
@@ -10,7 +9,6 @@ const platformLinks = [
 
 const resourceLinks = [
   { href: "#account", label: "Account" },
-  { href: "#faq", label: "FAQ" },
 ];
 
 const legalLinks = [
@@ -68,4 +66,4 @@ const FooterAlt = () => (
   </footer>
 );
 
-export default FooterAlt; 
+export default FooterAlt;
