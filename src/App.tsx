@@ -5,6 +5,7 @@ import Operations from "./components/Operations"
 import Labs from "./components/Labs"
 import Challenges from "./components/Challenges"
 import Footer from "./components/FooterAlt.tsx"
+import Contact from "./components/Contact"
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Operations/>
       <Labs/>
       <Challenges/>
+      <Contact />
       <Footer/>
     </div>
   )
