@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Play, Shield, Sword, Cloud, Network, Database, Lock, Code, Brain, Zap } from 'lucide-react';
+import { Shield, Sword, Cloud, Network, Zap } from 'lucide-react';
 
 // Import images from assets folder
 import lab1 from '../assets/lab1.png';
@@ -237,7 +237,7 @@ export default function Labs() {
                       Example Scenarios
                     </h4>
                     <div className="space-y-1">
-                      {lab.scenarios.map((scenario, idx) => (
+                      {lab.scenarios.map((scenario) => (
                         <div key={scenario} className="flex items-center gap-2">
                           <div
                             className={`w-1.5 h-1.5 rounded-full ${

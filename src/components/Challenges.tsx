@@ -106,7 +106,7 @@ export default function Challenges() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {competitiveFeatures.map((feature, index) => (
+            {competitiveFeatures.map((feature) => (
               <div key={feature.title} className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
                 <div className="text-purple-400 mb-4 flex justify-center">
                   {feature.icon}
