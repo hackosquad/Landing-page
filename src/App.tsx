@@ -32,10 +32,11 @@ const App = () => {
           }
         />
 
+        {/* Auth Routes */}
         <Route path="/loginmessages" element={<Login />} />
         <Route path="/messages" element={<Messages />} />
         
-        {/* This should be last */}
+        {/* Fallback route - must be last */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
