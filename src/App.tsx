@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -33,11 +33,27 @@ const App = () => {
           }
         />
 
-        {/* Login Page */}
-        <Route path="/loginmessages" element={<Login />} />
+        {/* Protected Admin Routes */}
+        <Route
+          path="/loginmessages"
+          element={
+            <div className="min-h-screen bg-black">
+              <Login />
+            </div>
+          }
+        />
 
-        {/* Messages Page (after login) */}
-        <Route path="/messages" element={<Messages />} />
+        <Route
+          path="/messages"
+          element={
+            <div className="min-h-screen bg-black">
+              <Messages />
+            </div>
+          }
+        />
+
+        {/* Catch all unmatched routes */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
