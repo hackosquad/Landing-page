@@ -16,7 +16,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Landing Page */}
         <Route
           path="/"
           element={
@@ -33,26 +32,10 @@ const App = () => {
           }
         />
 
-        {/* Protected Admin Routes */}
-        <Route
-          path="/loginmessages"
-          element={
-            <div className="min-h-screen bg-black">
-              <Login />
-            </div>
-          }
-        />
-
-        <Route
-          path="/messages"
-          element={
-            <div className="min-h-screen bg-black">
-              <Messages />
-            </div>
-          }
-        />
-
-        {/* Catch all unmatched routes */}
+        <Route path="/loginmessages" element={<Login />} />
+        <Route path="/messages" element={<Messages />} />
+        
+        {/* This should be last */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
