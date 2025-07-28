@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Landing-page/', 
+  // base: '/Landing-page/', // This line has been removed
   plugins: [react()],
   build: {
     outDir: 'dist',
