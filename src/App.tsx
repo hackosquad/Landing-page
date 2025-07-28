@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -16,7 +16,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Landing Page */}
         <Route
           path="/"
           element={
@@ -33,11 +32,12 @@ const App = () => {
           }
         />
 
-        {/* Login Page */}
+        {/* Auth Routes */}
         <Route path="/loginmessages" element={<Login />} />
-
-        {/* Messages Page (after login) */}
         <Route path="/messages" element={<Messages />} />
+        
+        {/* Fallback route - must be last */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
